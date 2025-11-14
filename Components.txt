@@ -1,0 +1,119 @@
+🛒 COMPLETE SHOPPING LIST — School Prototype Wheelchair + Glove Controller
+🧠 MAIN CONTROL (Wheelchair Body)
+Purpose	Component	Model / Example	Qty
+Main computer	Raspberry Pi 4 Model B (4 GB)	RPI4-MODBP-4GB	1
+Camera (for vision only)	Raspberry Pi Camera Module V2 (8 MP, IMX219)	RPI-CAM-V2	1
+Storage	MicroSD Card 32 GB Class 10	SanDisk Ultra 32 GB microSDHC A1	1
+Cooling	Heatsink + Fan Kit for Pi 4	RPI 4 Cooling Kit	1
+🔊 VOICE / MIC / INTERFACE
+Purpose	Component	Model / Example	Qty
+Speech input	INMP441 I²S Digital Microphone	INMP441 Mic Module	1
+Audio output	PAM8403 Stereo Amplifier Module (2 × 3 W)	PAM8403 Amp Module	1
+Speaker	3 W 8 Ω Speaker (50 mm)	Generic 3 W 8 Ω	1–2
+Buzzer	Active Buzzer 5 V	KY-012	1
+Real-time clock	DS3231 RTC Module	ZS-042 (DS3231)	1
+🕹️ COMMUNICATION / CONTROL MCUs
+Purpose	Component	Model / Example	Qty
+Wireless receiver + voice link	ESP32-S3 DevKitC-1 (N16R8)	ESP32-S3-DevKitC-1	1
+Joystick transmitter (on glove)	ESP32 DevKit V1 (WROOM-32)	DOIT ESP32 DevKit V1	1
+📡 GSM / SMS ALERT
+Purpose	Component	Model / Example	Qty
+GSM module (for SMS alerts only)	SIM800L V2 GSM Module w/ antenna	SIM800L V2	1
+⚙️ MOTORS / DRIVERS / SENSORS
+Purpose	Component	Model / Example	Qty
+Motor drivers	BTS7960 43 A Dual H-Bridge Driver	IBT-2 (BTS7960)	2
+DC motors (for small prototype car)	12 V 300 RPM Geared DC Motor	Generic 12 V 300 RPM	4
+Motion sensor	MPU6050 Gyro + Accelerometer	GY-521 (MPU6050)	1
+Relay for power control	1-Channel 5 V Relay Module	Songle SRD-05VDC-SL-C	1
+Buttons	12 mm tactile push buttons (SOS / Reset / Stop)	Generic	3
+🔋 MAIN POWER SYSTEM (Compact Li-ion 3 S)
+Purpose	Component	Model / Example	Qty
+Battery	3S 11.1 V Li-ion/LiPo Pack 2200 mAh (XT60)	3S 11.1 V 2200 mAh LiPo XT60	1
+Protection board (BMS)	3S 30 A Li-ion BMS PCM	3S 30A BMS PCM Board 11.1 V	1
+Charger	Balance Charger	iMAX B6AC V2	1
+DC-DC buck regulator (5 A)	XL4015 E1 DC-DC Buck Converter Module	XL4015E1	2
+Electrolytic capacitors	1000 µF 25 V, 1000 µF 16 V, 470 µF 16 V, 100 µF 16 V	Assorted pack	1 each
+Ceramic capacitors	0.1 µF (104)	Pack of 10	1 pack
+Connectors	XT60 male/female pair	Generic XT60	1 set
+Wires	Silicone wire (14–16 AWG)	Red/black pair	1 m each
+Switch	KCD4 Rocker Switch (12 V 10 A)	KCD4	1
+Terminal blocks	Screw terminal block (2-pin 5 mm)	Generic	4–6
+🧤 GLOVE CONTROLLER (Option B Power System)
+Purpose	Component	Model / Example	Qty
+Battery	1S LiPo 3.7 V 1000 mAh (JST-PH)	3.7 V 1000 mAh LiPo JST-PH	1
+Charger + protection	TP4056 Module w/ Protection (micro-USB input)	TP4056 Charger Module (Protected)	1
+Boost converter	MT3608 Step-Up DC-DC Boost Module (2 A)	MT3608 Boost Module	1
+Input capacitor	470 µF 16 V	—	1
+Output capacitor	100 µF 16 V + 0.1 µF ceramic	—	1 each
+MCU board	ESP32 DevKit V1 (WROOM-32)	DOIT ESP32 DevKit V1	1
+Joystick input	KY-023 Analog Joystick Module	Keyes KY-023	1
+Connectors	JST-PH 2-pin wire set	Generic	2
+Cable	Micro-USB cable (for charging)	Generic	1
+⚙️ MISC / TOOLS / BUILD
+Purpose	Component	Model / Example	Qty
+Jumper wires	Dupont male-female jumper wires (20 cm)	Generic 40-pcs set	1
+Heat-shrink tubing	Assorted diameters set	Generic	1 pack
+Velcro straps / double-tape	Hook-and-loop straps	Generic	as needed
+Small enclosure	Plastic project box or 3D-printed case	Generic	1–2
+Multimeter	Digital multimeter	DT830D / UNI-T UT33C+	1
+⚡ Power Setup Summary
+Main Battery Path
+3S 11.1 V LiPo → BMS → XT60 → XL4015 #1 (5.1 V → Pi + ESP32 + Amp)
+                              ↓
+                          XL4015 #2 (4.0 V → SIM800L)
+Battery also → BTS7960 drivers directly
+All grounds common
+
+Glove Battery Path
+3.7 V LiPo → TP4056 (Charge/Protect) → MT3608 Boost (5 V out) → ESP32 VIN
+470 µF @ input, 100 µF + 0.1 µF @ output
+
+🧾 Quick Order Summary (Group-by-Store suggestion)
+🔹 Core Electronics (Raspberry Pi, ESP32s, sensors)
+
+Search on Robu.in / Amazon.in / local electronics shop:
+
+Raspberry Pi 4 Model B (4 GB)
+Raspberry Pi Camera Module V2
+ESP32-S3 DevKitC-1
+DOIT ESP32 DevKit V1
+INMP441 I2S Mic Module
+MPU6050 GY-521
+DS3231 RTC Module
+KY-023 Joystick Module
+PAM8403 Amp Module + 3 W 8 Ω Speaker
+
+🔹 Power & Regulators
+3S 11.1 V 2200 mAh LiPo XT60
+3S 30 A Li-ion BMS PCM
+iMAX B6AC V2 Charger
+XL4015 E1 DC-DC Buck Converter Module × 2
+MT3608 Boost Module × 1
+TP4056 Charger Module w/ Protection
+Electrolytic Capacitors (1000 µF, 470 µF, 100 µF)
+Ceramic Capacitors (0.1 µF)
+
+🔹 Motors, Drivers, and Connectors
+BTS7960 43 A Motor Driver × 2
+12 V 300 RPM Geared DC Motor × 4
+XT60 Connector Pairs
+Silicone Wire 14–16 AWG
+KCD4 Rocker Switch
+Dupont Jumper Wires
+Heat-shrink Tube Set
+Velcro Straps
+Multimeter DT830D
+
+sensor (added now):
+
+ALSO: sd card reader
+HC-SR04 ultrasonic sensor
+ 
+
+⚙️ Capacitor Placement Reminder
+Location	Cap Value	Purpose
+XL4015 input	1000 µF / 25 V	Smooth battery supply
+5 V rail output	470 µF / 16 V + 0.1 µF	Pi/ESP stability
+SIM800L input	1000 µF / 16 V + 0.1 µF	GSM TX current spikes
+MT3608 input	470 µF / 16 V	Glove boost stability
+MT3608 output	100 µF / 16 V + 0.1 µF	Clean 5 V for ESP32

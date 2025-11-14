@@ -1,0 +1,186 @@
+Got it 👍 — here’s your **fully updated feature list** with all the requested modifications applied carefully and consistently:
+
+---
+
+## ⚙️ **Updated Smart Wheelchair Features (Latest Version)**
+
+---
+
+### 🎮 **Core Motion Control (Joystick-Based)**
+
+* **Hand gesture control removed.**
+* Wheelchair is now **controlled via a joystick** for direction (forward, backward, left, right).
+* **Speed control** is now managed by **joystick angle** — the more the joy stick is tilted forward or in the respective direction, the faster the wheelchair moves. 
+* Joystick data is transmitted **wirelessly via ESP module** (replacing NRF24L01+).
+* Smooth acceleration and deceleration based on tilt intensity.
+* Chair IMU monitors slope/tilt — if too steep or unstable, wheelchair stops and sends SOS alert.
+* Smart stop remains active: wheelchair automatically halts if obstacle/person detected.
+* Ignore/enable button on joystick module to temporarily disable control input.
+
+---
+
+### 🧠 **AI + Vision System (Raspberry Pi + Pi Camera V2 + ESP32-S3 Integration)**
+
+* Raspberry Pi handles **AI reasoning, scene understanding, and advanced perception**.
+* **Pi Camera V2** provides higher-quality image input for AI-based vision.
+* Functions include:
+
+  * Object and person detection.
+  * Door and path recognition (detects color, size, and opening direction).
+  * Smart pathfinding and obstacle avoidance.
+  * Scene understanding (“Two people ahead, door to the right”).
+  * Real-time smart stop when obstacle/person detected.
+  * Small-turn and path correction (ADAS-like control).
+  * Visual lane keeping and target tracking.
+  * AI-driven navigation toward visually detected goals (“brown door,” “small gate”).
+* AI integrated with **ChatGPT** for reasoning and natural conversation.
+* Understands natural commands like:
+
+  * “Move toward the brown door.”
+  * “Turn left after the red wall.”
+  * “Go straight until the open space.”
+* AI can also respond to queries:
+
+  * “What’s the time?”
+  * “Who is in front of me?”
+  * “Where am I right now?”
+  * “What is 45 × 17?”
+* AI provides **voice feedback** for alerts, directions, and responses.
+* Wake-word detection (“PorQ”) to activate voice mode.
+* Offline fallback for limited local commands when Wi-Fi unavailable.
+
+---
+
+### 📡 **Connectivity & Communication**
+
+* **ESP modules (ESP32-S3 and ESP8266/ESP32)** replace NRF24L01+ for wireless communication.
+* ESP provides robust **Wi-Fi and Bluetooth** connectivity between joystick controller, main board, and AI system.
+* **Bluetooth connection** (via mobile/laptop GUI) for:
+
+  * Settings updates (speed, geofence, reminders).
+  * Status checks (“Battery level?”, “Connection OK?”).
+  * Live control tests.
+* **Wi-Fi connection** to cloud (ChatGPT) for intelligent conversation and AI reasoning.
+
+---
+
+### 🚨 **Safety, SOS, and Alerts**
+
+* Dedicated **SOS button** on wheelchair triggers:
+
+  * Motor cutoff.
+  * Loud buzzer alert.
+  * SOS SMS with live GPS location to caretaker.
+* **Voice-triggered SOS** (“PorQ help me”).
+* **Automatic SOS** if wheelchair tilts dangerously or detects impact.
+* **Failsafe stop** if joystick or AI connection is lost.
+* **Emergency power-off button** for full system shutdown.
+* **Smart stop** still active — AI automatically stops when obstacle/person detected.
+* Visual or buzzer alerts (no haptic feedback).
+
+---
+
+### 🌍 **GPS Tracking & Geofencing**
+
+* **NEO-6M GPS module** for precise tracking.
+* **Geofencing system**:
+
+  * Configurable safe zone radius.
+  * Sends SMS alert with coordinates when leaving the area.
+* **Periodic live location updates** via SMS.
+* Automatic location report in SOS or low-battery condition.
+* Caretaker can request live location anytime.
+
+---
+
+### 💊 **Medicine Reminder & AI Health Assistance**
+
+* **DS3231 RTC** ensures accurate real-time clock.
+* AI-based medicine reminders:
+
+  * Voice alert via speaker:
+    “It’s time for your medicine — the red tablet in the small box.”
+  * Configurable reminder schedule via Bluetooth GUI.
+* Buzzer alerts user when reminder is due.
+* AI repeats reminder until user acknowledges via button or voice command.
+
+---
+
+### 🔊 **Audio Interaction**
+
+* **I²S microphone** for wake-word and command input.
+* **Speaker + amplifier** for AI voice output.
+* **Buzzer** used for all system alerts and medicine reminders.
+* Clear voice feedback for all interactions (movement, warnings, reminders).
+
+---
+
+### 🕹️ **Joystick Control Unit**
+
+* Compact hand-held joystick replaces glove.
+* 2-axis analog joystick controls direction.
+* Tilt sensors in seat control speed intensity.
+* **ESP module** in joystick sends data to main controller wirelessly.
+* “Ignore” button to disable control input temporarily.
+* Rechargeable via TP4056 module.
+
+---
+
+### 🪫 **Power & Hardware Management**
+
+* Central **main power switch** for entire system.
+* Battery voltage monitoring (low battery triggers SMS + buzzer).
+* Power relay disconnects motors during SOS, stop, or sleep mode.
+* Isolated logic (5V) and motor (12–24V) supplies.
+* Overcurrent and fuse protection.
+* Power-efficient standby mode — only AI listener active.
+
+---
+
+### 💡 **Advanced AI Safety & Navigation**
+
+* Smart stop for obstacle and human detection.
+* Self-correcting movement using AI vision.
+* Scene-based AI navigation (targets like doors, corridors).
+* AI integrates camera + sensor data for safer movement.
+* Context-aware reasoning:
+
+  * “Avoid that chair.”
+  * “The door is closed.”
+  * “Safe path on the left.”
+* ChatGPT reasoning via Wi-Fi for contextual dialogue.
+* Local fallback if Wi-Fi fails (basic motion + SOS + GPS).
+* Automated health, system, and location status reporting.
+
+---
+
+### 🧩 **Updated Hardware Integration**
+
+* **Main Controller:** Arduino Mega 2560 R3.
+* **AI Processor:** ESP32-S3 + Raspberry Pi (handles ChatGPT and vision).
+* **Camera:** Raspberry Pi Camera V2.
+* **Wireless Link:** ESP32 or ESP8266 (replaces NRF24L01+).
+* **Joystick Module:** Analog joystick + ESP module transmitter.
+* **GPS Module:** NEO-6M.
+* **GSM Module:** SIM800L for SMS alerts.
+* **Bluetooth:** via ESP module or HC-05.
+* **RTC:** DS3231.
+* **Audio:** I²S mic + PAM8403 amp + speaker + buzzer.
+* **Motor Driver:** BTS7960 dual-channel.
+* **Safety:** Tilt sensor, power relay, emergency stop, overcurrent protection.
+
+---
+
+✅ **Final System Summary (After All Updates):**
+
+* Replaced **gesture control with joystick**.
+* **Speed controlled by tilt angle** of the seat.
+* **Removed haptic feedback** (kept buzzer alerts).
+* **Pi Camera V2 + Raspberry Pi** for stronger AI and visual reasoning.
+* **ESP-based communication** replaces NRF modules.
+* **Smart stop remains active.**
+* Full **AI-assisted navigation, voice control, GPS, and SOS** system integrated.
+
+---
+
+Would you like me to now **draw and label the full wiring/system interconnection diagram** for this updated configuration (Mega, ESP, Pi, Joystick, GPS, GSM, etc.)?

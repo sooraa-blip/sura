@@ -1,0 +1,142 @@
+Here is your complete hardware list, exactly as provided, nothing removed, only organized into a clean list:
+
+✅ FULL HARDWARE SUMMARY LIST (Everything Included)
+🧠 MAIN CONTROL (Wheelchair Body)
+
+Raspberry Pi 4 Model B (4 GB) – RPI4-MODBP-4GB
+
+Raspberry Pi Camera Module V2 (8 MP, IMX219) – RPI-CAM-V2
+
+MicroSD Card 32 GB Class 10 – SanDisk Ultra 32GB
+
+Heatsink + Fan Kit for Pi 4 – RPI 4 Cooling Kit
+
+🔊 VOICE / MIC / INTERFACE
+
+INMP441 I²S Digital Microphone – INMP441
+
+PAM8403 Stereo Amplifier Module (2×3W)
+
+3W 8Ω Speaker (50 mm) – 1–2 pcs
+
+Active Buzzer 5V – KY-012
+
+DS3231 RTC Module – ZS-042
+
+🕹️ COMMUNICATION / CONTROL MCUs
+
+ESP32-S3 DevKitC-1 (N16R8)
+
+ESP32 DevKit V1 (WROOM-32) – Joystick glove controller
+
+📡 GSM / SMS ALERT
+
+SIM800L V2 GSM Module with antenna
+
+⚙️ MOTORS / DRIVERS / SENSORS
+
+BTS7960 43A Dual H-Bridge Motor Driver – IBT-2 × 2
+
+12V 300 RPM Geared DC Motor × 4
+
+MPU6050 Gyro + Accelerometer – GY-521
+
+1-Channel 5V Relay Module – Songle
+
+12 mm Tactile Push Buttons × 3
+
+HC-SR04 Ultrasonic Sensor (added)
+
+🔋 MAIN POWER SYSTEM (3S Li-ion/LiPo)
+
+3S 11.1V 2200 mAh LiPo XT60
+
+3S 30A BMS PCM Board
+
+iMAX B6AC V2 Charger
+
+XL4015 DC-DC Buck Converter × 2
+
+Electrolytic capacitors:
+
+1000 µF 25V
+
+1000 µF 16V
+
+470 µF 16V
+
+100 µF 16V
+
+Ceramic Capacitors 0.1 µF (104) – pack
+
+XT60 connectors (male + female)
+
+Silicone wires 14–16 AWG (1 m pair)
+
+KCD4 Rocker Switch
+
+Terminal blocks – 4–6 pcs
+
+🧤 GLOVE CONTROLLER (Power System B)
+
+3.7V 1000 mAh LiPo Battery (JST-PH)
+
+TP4056 Charger Module (with protection)
+
+MT3608 Boost Converter
+
+470 µF 16V capacitor
+
+100 µF 16V capacitor
+
+0.1 µF capacitor
+
+ESP32 DevKit V1
+
+KY-023 Analog Joystick Module
+
+JST-PH 2-pin connectors × 2
+
+Micro-USB Cable
+
+⚙️ MISC / TOOLS
+
+Jumper wires – Dupont set
+
+Heat-shrink tubing set
+
+Velcro straps / double tape
+
+Plastic project box / small enclosures
+
+Digital multimeter – DT830D / UNI-T UT33C+
+
+SD Card Reader (added)
+
+⚡ POWER SETUP SUMMARY
+
+Main Battery Path
+3S LiPo → BMS → XT60 →
+
+XL4015 #1 → 5.1 V → Pi + ESP32 + Amp
+
+XL4015 #2 → 4.0 V → SIM800L
+
+Motors → BTS7960 directly
+
+All grounds common
+
+Glove Power Path
+3.7V LiPo → TP4056 → MT3608 → 5V → ESP32 VIN
+
+470 µF input cap
+
+100 µF + 0.1 µF output caps
+
+📦 SENSOR (ADDED NOW)
+
+HC-SR04 Ultrasonic Sensor
+
+📦 EXTRA ADDED ITEM
+
+SD Card Reader

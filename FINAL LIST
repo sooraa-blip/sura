@@ -1,0 +1,90 @@
+✅ Final Smart Wheelchair Project Parts List
+1️⃣ Main Controller & Vision
+
+Raspberry Pi 4 Model B (4 GB RAM)
+
+Pi Camera Module V2 (8 MP)
+
+MicroSD Card 32 GB Class 10
+
+SD Card Reader (USB)
+
+Heatsink + Fan kit for Pi (optional)
+
+2️⃣ Wireless Control Modules
+
+ESP32 Dev Board WROOM‑32 ×2 (one for glove, one for wheelchair receiver)
+
+3️⃣ GSM / GPS / Alerts
+
+SIM800L V2 GSM Module with antenna
+
+NEO‑6M GPS Module
+
+DS3231 RTC Module
+
+Active Buzzer 5 V
+
+4️⃣ Audio / Voice Interaction
+
+INMP441 I²S Microphone Module
+
+USB-powered speaker (instead of PAM8403 amp + passive speaker)
+
+5️⃣ Motors / Movement / Sensors
+
+BTS7960 Dual H‑Bridge Motor Driver Module ×2
+
+12 V 300 RPM Geared DC Motors ×4
+
+MPU6050 Gyro + Accelerometer Module
+
+HC‑SR04 Ultrasonic Sensor (optional)
+
+Tactile Push Buttons ×3
+
+1‑Channel 5 V Relay Module (optional)
+
+6️⃣ Power & Wiring – Wheelchair Side
+
+12 V 3S Li‑Ion 18650 Battery Pack with BMS
+
+Buck Converter #1: 12 V → 5.1 V, ≥5 A output (Pi + peripherals)
+
+Buck Converter #2: 12 V → 4.0 V, ≥3 A output (SIM800L)
+
+Electrolytic Capacitors: 2200–4700 µF, low ESR ×2
+
+Ceramic Capacitors: 0.1 µF ×2
+
+XT60 Connectors (male + female)
+
+Silicone Wires 14–16 AWG (1 m pair)
+
+Inline Fuse (rated for motor current)
+
+KCD4 Rocker Switch (main power ON/OFF)
+
+Terminal Blocks ×4–6
+
+7️⃣ Power & Wiring – Glove Side
+
+5 V USB Power Bank, 5000 mAh, ≥2 A output
+
+USB Cable to ESP32
+
+Optional: 470 µF Electrolytic + 0.1 µF Ceramic Capacitor across VIN/GND of ESP32 for extra stability
+
+8️⃣ Misc / Accessories
+
+Jumper Wires (Dupont)
+
+Heat-Shrink Tubing
+
+Velcro / Double-Sided Tape
+
+Plastic Project Boxes / Enclosures
+
+Digital Multimeter (DT830D or UNI-T UT33C+)
+
+Extra wires, zip-ties, cable management
